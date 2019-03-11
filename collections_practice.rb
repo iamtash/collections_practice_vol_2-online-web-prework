@@ -42,9 +42,8 @@ def organize_schools(schools)
   locations_array.uniq!
   org_schools = {}
   locations_array.each {|location| org_schools[location] = []
-    schools.each {|school, location_hash| org_schools[location] << school if location_hash[:location] == location
+    schools.each {|school, location_hash| org_schools[location] << school if location_hash[:location] == location}
 
-    }
   }
   #binding.pry
   org_schools
